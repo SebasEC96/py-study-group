@@ -111,8 +111,13 @@ body .search-profile .search {
   html .search-profile .search,
   body .search-profile .search {
     width: 60rem;
-    height: 8rem;
-    margin: 1rem;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  html .search-profile .search,
+  body .search-profile .search {
+    width: 80rem;
   }
 }
 
@@ -196,6 +201,7 @@ body .search-profile .user-profile {
   border: 1px solid #30363d;
   border-radius: 0.5rem;
   margin: 1rem 1rem;
+  width: 20rem;
 }
 
 @media only screen and (min-width: 768px) {
@@ -219,6 +225,15 @@ body .search-profile .user-profile {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  html .search-profile .user-profile,
+  body .search-profile .user-profile {
+    width: 80rem;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
 }
 
@@ -248,6 +263,14 @@ body .search-profile .user-profile .user-img img {
   }
 }
 
+@media only screen and (min-width: 1920px) {
+  html .search-profile .user-profile .user-img img,
+  body .search-profile .user-profile .user-img img {
+    width: 18rem;
+    height: 18rem;
+  }
+}
+
 @media only screen and (min-width: 768px) {
   html .search-profile .user-profile .user-img,
   body .search-profile .user-profile .user-img {
@@ -259,6 +282,13 @@ body .search-profile .user-profile .user-img img {
   html .search-profile .user-profile .user-img,
   body .search-profile .user-profile .user-img {
     margin: 0 2rem;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  html .search-profile .user-profile .user-img,
+  body .search-profile .user-profile .user-img {
+    margin: 2rem 2rem;
   }
 }
 
@@ -324,6 +354,12 @@ body .search-profile .user-profile .pills .pill-stat a {
   display: flex;
 }
 
+html .search-profile .user-profile .pills .pill-stat a:hover,
+body .search-profile .user-profile .pills .pill-stat a:hover {
+  -webkit-filter: invert(76%) sepia(10%) saturate(170%) hue-rotate(169deg) brightness(94%) contrast(87%);
+          filter: invert(76%) sepia(10%) saturate(170%) hue-rotate(169deg) brightness(94%) contrast(87%);
+}
+
 html .search-profile .user-profile .user-info,
 body .search-profile .user-profile .user-info {
   padding: 1rem;
@@ -382,10 +418,17 @@ body .search-profile .error-404 {
   }
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1024px) {
   html .search-profile .error-404,
   body .search-profile .error-404 {
     width: 60rem;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  html .search-profile .error-404,
+  body .search-profile .error-404 {
+    width: 80rem;
   }
 }
 
@@ -399,6 +442,13 @@ body .search-profile .error-404 span {
   html .search-profile .error-404 span,
   body .search-profile .error-404 span {
     margin: 2rem 0;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  html .search-profile .error-404 span,
+  body .search-profile .error-404 span {
+    margin: 3rem 0;
   }
 }
 

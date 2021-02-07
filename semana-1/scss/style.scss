@@ -83,8 +83,9 @@ body {
       }
       @media only screen and (min-width: 1024px) {
         width: 60rem;
-        height: 8rem;
-        margin: 1rem;
+      }
+      @media only screen and (min-width: 1920px) {
+        width: 80rem;
       }
 
       form {
@@ -137,6 +138,7 @@ body {
       border: 1px solid $border-primary;
       border-radius: 0.5rem;
       margin: 1rem 1rem;
+      width: 20rem;
       @media only screen and (min-width: 768px) {
         width: 40rem;
       }
@@ -145,6 +147,10 @@ body {
         flex-direction: row;
         justify-content: center;
         align-items: center;
+      }
+      @media only screen and (min-width: 1920px) {
+        width: 80rem;
+        justify-content: space-around;
       }
       .user-img {
         display: flex;
@@ -158,12 +164,19 @@ body {
             width: 12rem;
             height: 12rem;
           }
+          @media only screen and (min-width: 1920px) {
+            width: 18rem;
+            height: 18rem;
+          }
         }
         @media only screen and (min-width: 768px) {
           margin: 2rem 0;
         }
         @media only screen and (min-width: 1024px) {
           margin: 0 2rem;
+        }
+        @media only screen and (min-width: 1920px) {
+          margin: 2rem 2rem;
         }
       }
       .pills {
@@ -193,6 +206,11 @@ body {
 
           a {
             display: flex;
+
+            &:hover {
+              filter: invert(76%) sepia(10%) saturate(170%) hue-rotate(169deg)
+                brightness(94%) contrast(87%);
+            }
           }
         }
       }
@@ -230,14 +248,20 @@ body {
       @media only screen and (min-width: 768px) {
         width: 40rem;
       }
-      @media only screen and (min-width: 768px) {
+      @media only screen and (min-width: 1024px) {
         width: 60rem;
+      }
+      @media only screen and (min-width: 1920px) {
+        width: 80rem;
       }
       span {
         font-size: 1.25rem;
         margin: 1rem 0;
         @media only screen and (min-width: 768px) {
           margin: 2rem 0;
+        }
+        @media only screen and (min-width: 1920px) {
+          margin: 3rem 0;
         }
       }
     }
