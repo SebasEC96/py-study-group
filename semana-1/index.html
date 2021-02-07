@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="./assets/img/icon-github.svg"
+      sizes="any"
+      type="image/svg+xml"
+    />
+    <title>Github Profile Finder</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img
+          src="./assets/img/icon-github.svg"
+          alt="icon-github"
+          height="32px"
+          width="32px"
+        />
+        <span>Profile Finder</span>
+      </div>
+    </header>
+
+    <section class="search-profile">
+      <div class="search">
+        <form>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            placeholder="Username"
+            class="input"
+          />
+          <input type="submit" value="Find User" class="input-btn" />
+        </form>
+      </div>
+      <div class="user-profile">
+        <div class="user-img">
+          <img src="./assets/img/profile-image.png" alt="user-image" />
+        </div>
+
+        <div class="pills">
+          <div class="pill-stat">
+            <img src="./assets/img/followers.svg" alt="followers" />
+            &nbsp
+            <span>1</span>
+          </div>
+          <div class="pill-stat">
+            <a href="https://github.com" target="_blank"
+              ><img src="./assets/img/icon-github.svg" alt="github-profile"
+            /></a>
+          </div>
+          <div class="pill-stat">
+            <img src="./assets/img/repo.svg" alt="repositories" />
+            &nbsp
+            <span>2</span>
+          </div>
+        </div>
+
+        <div class="user-info">
+          <div class="info">
+            <label>Name: <span>SebasEC</span></label>
+          </div>
+          <div class="info">
+            <label>Location: <span>Argentina</span></label>
+          </div>
+          <div class="info">
+            <label>Member since: <span>21/10/18</span></label>
+          </div>
+          <div class="info">
+            <label
+              >Bio:
+              <span
+                >Lorem ipsum dolor sit amet consecetur adipisicing elit.</span
+              ></label
+            >
+          </div>
+        </div>
+      </div>
+      <div class="error-404">
+        <span>404 Error! 😿 User not found.</span>
+      </div>
+    </section>
+
+    <footer>
+      <span
+        >Made by&nbsp<a href="https://github.com/SebasEC96" target="_blank"
+          >SebasEC</a
+        >&nbsp-&nbspJanuary 2021</span
+      >
+    </footer>
+  </body>
+</html>

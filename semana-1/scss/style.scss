@@ -1,0 +1,268 @@
+// ----------------------FONTS----------------------
+@font-face {
+  font-family: "Segoe UI Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Segoe UI Regular"), url("../fonts/Segoe UI.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Segoe UI Bold";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Segoe UI Bold"), url("../fonts/Segoe UI Bold.woff") format("woff");
+}
+// ----------------------COLORS----------------------
+$bg-primary: #06090f;
+$bg-header: #161b22;
+$bg-card: #0d1117;
+$white-text: #f0f6fc;
+$text-link: #58a6ff;
+$border-primary: #30363d;
+$button: #238636;
+$button-hover: #2ea043;
+$button-hover-border: #3fb950;
+// ----------------------STYLES----------------------
+* {
+  margin: 0;
+  padding: 0;
+  color: $white-text;
+}
+
+html,
+body {
+  background-color: $bg-primary;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: "Segoe UI Regular";
+
+  header {
+    background-color: $bg-header;
+    .logo {
+      display: flex;
+      align-items: center;
+      padding: 1rem 2rem;
+      img {
+        &:hover {
+          filter: invert(76%) sepia(10%) saturate(170%) hue-rotate(169deg)
+            brightness(94%) contrast(87%);
+        }
+      }
+      span {
+        font-family: "Segoe UI Bold";
+        font-size: 1.5rem;
+        color: $white-text;
+        margin-left: 0.75rem;
+      }
+    }
+  }
+
+  .search-profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+
+    .search {
+      width: 20rem;
+      height: 6rem;
+      margin: 1rem;
+      border: 1px solid $border-primary;
+      border-radius: 0.5rem;
+      background-color: $bg-card;
+
+      @media only screen and (min-width: 768px) {
+        display: flex;
+        justify-content: space-around;
+        width: 40rem;
+        height: 8rem;
+        margin: 1rem;
+      }
+      @media only screen and (min-width: 1024px) {
+        width: 60rem;
+        height: 8rem;
+        margin: 1rem;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        justify-content: center;
+        align-items: center;
+        margin: 1rem 2rem;
+        @media only screen and (min-width: 768px) {
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-around;
+          width: 100%;
+        }
+        .input {
+          padding: 0.2rem;
+          margin: 0.25rem;
+          border: 1px solid $border-primary;
+          border-radius: 0.25rem;
+          outline: none;
+          background-color: $bg-primary;
+          color: $white-text;
+
+          &:focus {
+            border-color: $button;
+          }
+        }
+
+        .input-btn {
+          width: 5rem;
+          padding: 0.2rem;
+          margin: 0.25rem;
+          border: 1px solid $button-hover;
+          border-radius: 0.375rem;
+          background-color: $button;
+          color: $white-text;
+
+          &:hover {
+            background-color: $button-hover;
+          }
+        }
+      }
+    }
+
+    .user-profile {
+      display: flex;
+      flex-direction: column;
+      background-color: $bg-card;
+      border: 1px solid $border-primary;
+      border-radius: 0.5rem;
+      margin: 1rem 1rem;
+      @media only screen and (min-width: 768px) {
+        width: 40rem;
+      }
+      @media only screen and (min-width: 1024px) {
+        width: 60rem;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+      }
+      .user-img {
+        display: flex;
+        justify-content: center;
+        margin: 1rem 0;
+        img {
+          border-radius: 50%;
+          width: 8rem;
+          height: 8rem;
+          @media only screen and (min-width: 768px) {
+            width: 12rem;
+            height: 12rem;
+          }
+        }
+        @media only screen and (min-width: 768px) {
+          margin: 2rem 0;
+        }
+        @media only screen and (min-width: 1024px) {
+          margin: 0 2rem;
+        }
+      }
+      .pills {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+
+        @media only screen and (min-width: 768px) {
+          margin: 2rem 0;
+        }
+        @media only screen and (min-width: 1024px) {
+          flex-direction: column;
+          margin: 0;
+        }
+        .pill-stat {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 0.25rem 0.5rem;
+          border: 1px solid $border-primary;
+          border-radius: 0.5rem;
+          background-color: $bg-primary;
+
+          @media only screen and (min-width: 1024px) {
+            margin: 0.25rem 0;
+          }
+
+          a {
+            display: flex;
+          }
+        }
+      }
+
+      .user-info {
+        padding: 1rem;
+        @media only screen and (min-width: 768px) {
+          margin: 2rem 2rem;
+        }
+        .info {
+          @media only screen and (min-width: 768px) {
+            padding: 0.5rem 0;
+          }
+          label {
+            font-weight: 800;
+
+            span {
+              font-weight: 400;
+            }
+          }
+        }
+      }
+    }
+
+    .error-404 {
+      margin: 1rem;
+      border: 1px solid $border-primary;
+      border-radius: 0.5rem;
+      background-color: $bg-card;
+      width: 20rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      @media only screen and (min-width: 768px) {
+        width: 40rem;
+      }
+      @media only screen and (min-width: 768px) {
+        width: 60rem;
+      }
+      span {
+        font-size: 1.25rem;
+        margin: 1rem 0;
+        @media only screen and (min-width: 768px) {
+          margin: 2rem 0;
+        }
+      }
+    }
+  }
+
+  footer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    font-size: 0.75rem;
+    span {
+      display: flex;
+      justify-content: center;
+      padding: 1rem;
+      color: $white-text;
+
+      a {
+        color: $white-text;
+        text-decoration: none;
+
+        &:hover {
+          color: $text-link;
+          border-color: $button-hover-border;
+        }
+      }
+    }
+  }
+}
