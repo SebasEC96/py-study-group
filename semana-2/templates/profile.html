@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+
+{% block userProfile %}
+<div class="user-profile">
+  <div class="user-img">
+    <img src="{{ profile.avatar_url }}" alt="user-image" />
+
+  </div>
+  <div class="pills">
+    <div class="pill-stat">
+      <img src="{{ url_for('static', filename='assets/icons/followers.svg') }}" alt="followers" />
+      &nbsp
+      <span>{{ profile.followers }}</span>
+    </div>
+    {% if profile.twitter_username != None %}
+      <div class="pill-stat">
+        <a href=https://twitter.com/{{profile.twitter_username}} target="_blank"
+          ><img src="{{ url_for('static', filename='assets/icons/icon-twitter.svg') }}" alt="twitter-link"
+        /></a>
+      </div>
+    {% endif %}
+    <div class="pill-stat">
+      <a href={{ profile.html_url }} target="_blank"
+      ><img src="{{ url_for('static', filename='assets/icons/icon-github.svg') }}" alt="github-link"
+    /></a>
+    </div>
+    <div class="pill-stat">
+      <img src="{{ url_for('static', filename='assets/icons/repo.svg') }}" alt="repositories" />
+      &nbsp
+      <span>{{ profile.public_repos }}</span>
+    </div>
+  </div>
+
+  <div class="user-info">
+    <div class="info">
+      <label>Name: <span>{{ profile.login }}</span></label>
+    </div>
+    <div class="info">
+      <label>Location: <span>{{ profile.location }}</span></label>
+    </div>
+    <div class="info">
+      <label>Blog: <span>
+        {% if profile.blog != '' %}
+        <a href={{ profile.blog }} target="_blank">Link</a>
+        {% else %}
+        -
+        {% endif %}
+      </span></label>
+    </div>
+    <div class="info">
+      <label>Member since: <span>{{ date }}</span></label>
+    </div>
+    <div class="info">
+      <label>Bio:
+        <span>
+          {% if profile.bio != None %}
+            {{ profile.bio }}
+          {% else %}
+            -
+          {% endif %}
+        </span>
+      </label>
+    </div>
+  </div>
+</div>
+{% endblock %}
