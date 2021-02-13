@@ -1,0 +1,292 @@
+@font-face {
+  font-family: "Segoe UI Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Segoe UI Regular"), url("../fonts/Segoe UI.woff") format("woff"); }
+
+@font-face {
+  font-family: "Segoe UI Bold";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Segoe UI Bold"), url("../fonts/Segoe UI Bold.woff") format("woff"); }
+
+* {
+  margin: 0;
+  padding: 0;
+  color: #f0f6fc; }
+
+html,
+body {
+  background-color: #06090f;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: "Segoe UI Regular"; }
+  html header,
+  body header {
+    background-color: #161b22; }
+    html header .logo,
+    body header .logo {
+      display: flex;
+      align-items: center;
+      padding: 1rem 2rem; }
+      html header .logo img:hover,
+      body header .logo img:hover {
+        filter: invert(76%) sepia(10%) saturate(170%) hue-rotate(169deg) brightness(94%) contrast(87%); }
+      html header .logo span,
+      body header .logo span {
+        font-family: "Segoe UI Bold";
+        font-size: 1.5rem;
+        color: #f0f6fc;
+        margin-left: 0.75rem; }
+  html .search-profile,
+  body .search-profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem; }
+    html .search-profile .titles,
+    body .search-profile .titles {
+      padding: 2rem;
+      text-align: center; }
+      html .search-profile .titles h1,
+      body .search-profile .titles h1 {
+        font-family: "Segoe UI Bold";
+        font-size: 2rem;
+        margin-bottom: 0.5rem; }
+    html .search-profile .search,
+    body .search-profile .search {
+      width: 20rem;
+      height: 6rem;
+      margin: 1rem;
+      border: 1px solid #30363d;
+      border-radius: 0.5rem;
+      background-color: #0d1117; }
+      @media only screen and (min-width: 768px) {
+        html .search-profile .search,
+        body .search-profile .search {
+          display: flex;
+          justify-content: space-around;
+          width: 40rem;
+          height: 8rem;
+          margin: 1rem; } }
+      @media only screen and (min-width: 1024px) {
+        html .search-profile .search,
+        body .search-profile .search {
+          width: 60rem; } }
+      @media only screen and (min-width: 1920px) {
+        html .search-profile .search,
+        body .search-profile .search {
+          width: 80rem; } }
+      html .search-profile .search form,
+      body .search-profile .search form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 1rem 2rem; }
+        @media only screen and (min-width: 768px) {
+          html .search-profile .search form,
+          body .search-profile .search form {
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+            width: 100%; } }
+        html .search-profile .search form .input,
+        body .search-profile .search form .input {
+          padding: 0.2rem;
+          margin: 0.25rem;
+          border: 1px solid #30363d;
+          border-radius: 0.25rem;
+          outline: none;
+          background-color: #06090f;
+          color: #f0f6fc; }
+          html .search-profile .search form .input:focus,
+          body .search-profile .search form .input:focus {
+            border-color: #238636; }
+        html .search-profile .search form p,
+        body .search-profile .search form p {
+          color: red;
+          font-size: 0.75rem;
+          text-align: center; }
+        html .search-profile .search form .input-btn,
+        body .search-profile .search form .input-btn {
+          width: 5rem;
+          padding: 0.2rem;
+          margin: 0.25rem;
+          border: 1px solid #2ea043;
+          border-radius: 0.375rem;
+          background-color: #238636;
+          color: #f0f6fc; }
+          html .search-profile .search form .input-btn:hover,
+          body .search-profile .search form .input-btn:hover {
+            background-color: #2ea043; }
+          html .search-profile .search form .input-btn:active,
+          body .search-profile .search form .input-btn:active {
+            background-color: #238636; }
+    html .search-profile .user-profile,
+    body .search-profile .user-profile {
+      display: flex;
+      flex-direction: column;
+      background-color: #0d1117;
+      border: 1px solid #30363d;
+      border-radius: 0.5rem;
+      margin: 1rem 1rem;
+      width: 20rem; }
+      @media only screen and (min-width: 768px) {
+        html .search-profile .user-profile,
+        body .search-profile .user-profile {
+          width: 40rem; } }
+      @media only screen and (min-width: 1024px) {
+        html .search-profile .user-profile,
+        body .search-profile .user-profile {
+          width: 60rem;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center; } }
+      @media only screen and (min-width: 1920px) {
+        html .search-profile .user-profile,
+        body .search-profile .user-profile {
+          width: 80rem;
+          justify-content: space-around; } }
+      html .search-profile .user-profile .user-img,
+      body .search-profile .user-profile .user-img {
+        display: flex;
+        justify-content: center;
+        margin: 1rem 0; }
+        html .search-profile .user-profile .user-img img,
+        body .search-profile .user-profile .user-img img {
+          border-radius: 50%;
+          width: 8rem;
+          height: 8rem; }
+          @media only screen and (min-width: 768px) {
+            html .search-profile .user-profile .user-img img,
+            body .search-profile .user-profile .user-img img {
+              width: 12rem;
+              height: 12rem; } }
+          @media only screen and (min-width: 1920px) {
+            html .search-profile .user-profile .user-img img,
+            body .search-profile .user-profile .user-img img {
+              width: 18rem;
+              height: 18rem; } }
+        @media only screen and (min-width: 768px) {
+          html .search-profile .user-profile .user-img,
+          body .search-profile .user-profile .user-img {
+            margin: 2rem 0; } }
+        @media only screen and (min-width: 1024px) {
+          html .search-profile .user-profile .user-img,
+          body .search-profile .user-profile .user-img {
+            margin: 0 2rem; } }
+        @media only screen and (min-width: 1920px) {
+          html .search-profile .user-profile .user-img,
+          body .search-profile .user-profile .user-img {
+            margin: 2rem 2rem; } }
+      html .search-profile .user-profile .pills,
+      body .search-profile .user-profile .pills {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around; }
+        @media only screen and (min-width: 768px) {
+          html .search-profile .user-profile .pills,
+          body .search-profile .user-profile .pills {
+            margin: 2rem 0; } }
+        @media only screen and (min-width: 1024px) {
+          html .search-profile .user-profile .pills,
+          body .search-profile .user-profile .pills {
+            flex-direction: column;
+            margin: 0; } }
+        html .search-profile .user-profile .pills .pill-stat,
+        body .search-profile .user-profile .pills .pill-stat {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 0.25rem 0.5rem;
+          border: 1px solid #30363d;
+          border-radius: 0.5rem;
+          background-color: #06090f; }
+          @media only screen and (min-width: 1024px) {
+            html .search-profile .user-profile .pills .pill-stat,
+            body .search-profile .user-profile .pills .pill-stat {
+              margin: 0.25rem 0; } }
+          html .search-profile .user-profile .pills .pill-stat a,
+          body .search-profile .user-profile .pills .pill-stat a {
+            display: flex; }
+            html .search-profile .user-profile .pills .pill-stat a:hover,
+            body .search-profile .user-profile .pills .pill-stat a:hover {
+              filter: invert(76%) sepia(10%) saturate(170%) hue-rotate(169deg) brightness(94%) contrast(87%); }
+      html .search-profile .user-profile .user-info,
+      body .search-profile .user-profile .user-info {
+        padding: 1rem; }
+        @media only screen and (min-width: 768px) {
+          html .search-profile .user-profile .user-info,
+          body .search-profile .user-profile .user-info {
+            margin: 2rem 2rem; } }
+        @media only screen and (min-width: 768px) {
+          html .search-profile .user-profile .user-info .info,
+          body .search-profile .user-profile .user-info .info {
+            padding: 0.5rem 0; } }
+        html .search-profile .user-profile .user-info .info label,
+        body .search-profile .user-profile .user-info .info label {
+          font-weight: 800; }
+          html .search-profile .user-profile .user-info .info label span,
+          body .search-profile .user-profile .user-info .info label span {
+            font-weight: 400; }
+    html .search-profile .error-404,
+    body .search-profile .error-404 {
+      margin: 1rem;
+      border: 1px solid #30363d;
+      border-radius: 0.5rem;
+      background-color: #0d1117;
+      width: 20rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+      @media only screen and (min-width: 768px) {
+        html .search-profile .error-404,
+        body .search-profile .error-404 {
+          width: 40rem; } }
+      @media only screen and (min-width: 1024px) {
+        html .search-profile .error-404,
+        body .search-profile .error-404 {
+          width: 60rem; } }
+      @media only screen and (min-width: 1920px) {
+        html .search-profile .error-404,
+        body .search-profile .error-404 {
+          width: 80rem; } }
+      html .search-profile .error-404 span,
+      body .search-profile .error-404 span {
+        font-size: 1.25rem;
+        margin: 1rem 0; }
+        @media only screen and (min-width: 768px) {
+          html .search-profile .error-404 span,
+          body .search-profile .error-404 span {
+            margin: 2rem 0; } }
+        @media only screen and (min-width: 1920px) {
+          html .search-profile .error-404 span,
+          body .search-profile .error-404 span {
+            margin: 3rem 0; } }
+  html footer,
+  body footer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    font-size: 0.75rem; }
+    html footer span,
+    body footer span {
+      display: flex;
+      justify-content: center;
+      padding: 1rem;
+      color: #f0f6fc; }
+      html footer span a,
+      body footer span a {
+        color: #f0f6fc;
+        text-decoration: none; }
+        html footer span a:hover,
+        body footer span a:hover {
+          color: #58a6ff;
+          border-color: #3fb950; }
+
+/*# sourceMappingURL=style.scss.css.map */
