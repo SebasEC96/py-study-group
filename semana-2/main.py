@@ -11,7 +11,7 @@ app.wsgi_app = SassMiddleware(app.wsgi_app, {
 
 @app.errorhandler(404)
 def page_not_found(e):
-    return 'ERROR 404', 404
+    return render_template('404.html')
 
 
 @app.route('/')
@@ -21,13 +21,13 @@ def index():
 
 @app.route('/user/<name>')
 def profile(name):
-    request = requests.get('https://api.github.com/users/'+name)
+    request = requests.get(f'https://api.github.com/users/{name}')
     profile = request.json()
     if ('message' in profile):
         return redirect(url_for('error404'))
     else:
         date = datetime.strptime(
-            profile['created_at'], "%Y-%m-%dT%H:%M:%S%z").date().strftime("%d/%m/%y")
+            profile['created_at'], "%Y-%m-%dT%H:%M:%SZ").date().strftime("%d/%m/%y")
         return render_template('profile.html', profile=profile, date=date)
 
 
