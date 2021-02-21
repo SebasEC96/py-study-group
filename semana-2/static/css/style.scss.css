@@ -59,7 +59,7 @@ body {
     html .search-profile .search,
     body .search-profile .search {
       width: 20rem;
-      height: 6rem;
+      height: 7rem;
       margin: 1rem;
       border: 1px solid #30363d;
       border-radius: 0.5rem;
@@ -94,28 +94,33 @@ body {
             align-items: center;
             justify-content: space-around;
             width: 100%; } }
-        html .search-profile .search form .input,
-        body .search-profile .search form .input {
-          padding: 0.2rem;
-          margin: 0.25rem;
-          border: 1px solid #30363d;
-          border-radius: 0.25rem;
-          outline: none;
-          background-color: #06090f;
-          color: #f0f6fc; }
-          html .search-profile .search form .input:focus,
-          body .search-profile .search form .input:focus {
-            border-color: #238636; }
-        html .search-profile .search form p,
-        body .search-profile .search form p {
-          color: red;
-          font-size: 0.75rem;
-          text-align: center; }
+        html .search-profile .search form .input-group,
+        body .search-profile .search form .input-group {
+          display: flex;
+          flex-direction: column; }
+          html .search-profile .search form .input-group .input,
+          body .search-profile .search form .input-group .input {
+            width: 10rem;
+            padding: 0.2rem;
+            margin: 0.25rem;
+            border: 1px solid #30363d;
+            border-radius: 0.25rem;
+            outline: none;
+            background-color: #06090f;
+            color: #f0f6fc; }
+            html .search-profile .search form .input-group .input:focus,
+            body .search-profile .search form .input-group .input:focus {
+              border-color: #238636; }
+          html .search-profile .search form .input-group .validators,
+          body .search-profile .search form .input-group .validators {
+            color: red;
+            font-size: 0.75rem;
+            text-align: center; }
         html .search-profile .search form .input-btn,
         body .search-profile .search form .input-btn {
           width: 5rem;
           padding: 0.2rem;
-          margin: 0.25rem;
+          margin: 0.5rem;
           border: 1px solid #2ea043;
           border-radius: 0.375rem;
           background-color: #238636;
