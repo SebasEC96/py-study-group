@@ -7,7 +7,6 @@ import forms
 
 app = Flask(__name__)
 app.wsgi_app = SassMiddleware(app.wsgi_app, {
-    # 'main': ('static/sass', 'static/css', '/static/css'),
     'main': {
         'sass_path': 'static/sass',
         'css_path': 'static/css',
