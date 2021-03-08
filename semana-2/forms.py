@@ -1,6 +1,6 @@
 from wtforms import Form, StringField, validators
-from wtforms_validators import AlphaNumeric
+
 
 class SearchProfileForm(Form):
-    username = StringField(
-        'Username', [validators.required(), validators.Length(min=1, max=25), AlphaNumeric(message="Must only contain alphanumeric characters")])
+    username = StringField('Username', [validators.required(), validators.Length(min=1, max=25), validators.regexp(
+        r'^[a-z\d](?:[a-z\d]|-(?=[a-z\d])){0,38}$', message="Must only contain alphanumeric characters and dash")])

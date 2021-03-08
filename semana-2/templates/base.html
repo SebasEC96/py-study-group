@@ -10,7 +10,11 @@
       type="image/svg+xml"
     />
     <title>Github Profile Finder</title>
-    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet" type="text/css">
+    <link
+      href="{{ url_for('static', filename='css/style.css') }}"
+      rel="stylesheet"
+      type="text/css"
+    />
   </head>
   <body>
     <header>
@@ -30,24 +34,24 @@
     <section class="search-profile">
       <div class="titles">
         <h1>Welcome to Github Profile Finder</h1>
-        <h3>Please input the username you want to search and then click "Find User"</h3>
+        <h3>
+          Please input the username you want to search and then click "Find
+          User"
+        </h3>
       </div>
       <div class="search">
-        <form name="searchForm" method=POST action="/">
+        <form name="searchForm" method="POST" action="/">
           <div class="input-group">
-            {{ form.username(class="input", autocomplete="off", placeholder="Username")}}
-            {% for error in form.errors.username %}
-              <span class="validators">{{ error }}</span>
+            {{ form.username(class="input", autocomplete="off",
+            placeholder="Username")}} {% for error in form.errors.username %}
+            <span class="validators">{{ error }}</span>
             {% endfor %}
           </div>
-          <input type=submit value="Find User" class="input-btn">
+          <input type="submit" value="Find User" class="input-btn" />
         </form>
       </div>
 
-      {% block userProfile %} 
-      {% endblock %} 
-      {% block error404 %} 
-      {% endblock %}
+      {% block userProfile %} {% endblock %} {% block error404 %} {% endblock %}
     </section>
 
     <footer>
